@@ -52,7 +52,14 @@ strong {font-weight: bold;}
 
 /* Divi overrides */
 .et_pb_section { padding: unset!important}
-.et_pb_row { width: unset!important;margin: unset!important;max-width: unset!important;padding: unset!important}
+.et_pb_row { width: unset!important;margin: unset!important;max-width: unset!important;padding: unset!important;}
+body:not(.et-tb) #main-content .container { padding-top: unset;}
+.splide .splide__slide br {display: none;}
+h1,h2,h3,h4,h5,h6 {padding-bottom: unset;}
+footer.et-l, 
+footer.et-l--footer {padding-top: 0;padding-bottom: 0;}
+
+
 
 /* Bootstrap extends and overrides */
 body {line-height: 1.4!important;}
@@ -431,6 +438,11 @@ section.banner .container .banner-content h3.subtitle {margin-top: 1rem;margin-b
 
 section.banner#banner-1 {background-image: url('img/home-banner.png') ;}
 section.banner#banner-2 {background-image: url('img/home-banner.png') ;}
+section.banner#banner-3 {background-image: url('img/home-banner.png') ;}
+
+/* section.banner#banner-1 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
+section.banner#banner-2 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
+section.banner#banner-3 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;} */
 
 
 @media (max-width: 767px) {
