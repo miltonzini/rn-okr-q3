@@ -349,7 +349,7 @@ footer .container {
 	width: 100%;
 	/* line-height: 1rem; */
 }
-
+footer .column {width: 33%;}
 footer .column * {
 	line-height: 1.75rem;
 } 
@@ -368,32 +368,26 @@ footer .second-row p { color: var(--white); text-align: center; position: relati
 footer .second-row a:hover { color: var(--accent); transition: 0.6s; }
 footer .second-row .container {flex-direction: column;}
 footer .line { width: 100%;}
-footer .second-row span.divider {margin: 0 0.5rem;}
 
 footer .first-column p {margin-top: 1rem;}
 
 
 
 @media(max-width: 1240px){
-    footer { padding: 50px 0 30px 0; }
+    footer { padding: 80px 0 50px 0; }
     footer .container { flex-wrap: wrap; }       
-    footer .first-column { width: 38%;margin-bottom: 1rem;}
-    footer .first-column a { width: fit-content; margin-left: auto;}
-    footer .first-column img { display: flex; align-items: center; margin-left: auto; margin-right: 1rem; max-width: 5rem;}
-    footer .second-column { width: 62%; flex-direction: row; justify-content: flex-start;margin-bottom: 1rem;}
+    footer .first-column { width: 100%;margin-bottom: 4rem;text-align: center;}
+    footer .first-column p { max-width: 50ch;margin-left: auto;margin-right: auto;}
+    footer .first-column img { display: flex; align-items: center; margin-left: auto; margin-right: auto;}
+    footer .second-column { width: 50%; flex-direction: row; justify-content: flex-start;margin-bottom: 1rem;}
     footer .second-column p {max-width: 33ch;}
-    footer .third-column { width: 25%; }
-    footer .fourth-column { width: 25%; }
-    footer .fifth-column { width: 25%; } 
-    footer .sixth-column { width: 25%; } 
+    footer .third-column { width: 50%; }
 }
 
-@media(max-width: 992px){
-    footer .third-column { width: 50%; } 
-    footer .fourth-column { width: 50%; }
-    footer .fifth-column { width: 50%; } 
-    footer .sixth-column { width: 50%; } 
-    footer .second-row .divider-horizontal-line { margin-top: 18px; }
+@media (min-width: 576px) and (max-width: 1239px) {
+    footer .columns-wrapper {display: flex;flex-direction: row;justify-content: space-around;column-gap: 1rem;}
+    footer .second-column {max-width: 20rem;}
+    footer .third-column {max-width: 20rem;}
 }
 
 
@@ -464,6 +458,9 @@ section#services .service .description {padding-left: 1rem;}
 section#services .service .description h4 {font-family: 'Nunito Sans', sans-serif;font-weight: var(--fw-extrabold);}
 section#services .service .description p {max-width: 43ch;}
 section#services .btn.cta {margin-left: auto;margin-right: auto;margin-top: 3rem;}
+@media (max-width: 767px) {
+    section#services .service {margin: 1rem 0;padding: 1rem 2rem;}
+}
 
 
 section#bridge-of-trust {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;overflow: clip;}
@@ -498,6 +495,9 @@ section#about-us .second-column h2.section-title {color: var(--primary);font-wei
 section#about-us .second-column h3 {color: var(--primary);text-transform: uppercase;font-weight: var(--fw-black);}
 section#about-us .second-column h3:nth-of-type(2){margin-top: 1rem;}
 section#about-us .second-column .btn.cta {margin-top: 1rem;}
+@media (max-width: 767px) {
+    section#about-us .second-column {text-align: center;}
+}
 
 /* section#last-section {} */
 section#last-section .first-column {background: var(--primary);color: var(--white)}
@@ -506,8 +506,10 @@ section#last-section .first-column h5 {text-transform: uppercase;font-weight: va
 section#last-section .first-column p {max-width: 50ch;}
 section#last-section .first-column .btn.cta {margin-top: 1rem;}
 section#last-section .second-column {overflow: clip;}
-section#last-section .second-column img {
-    transition: transform 1.5s ease; /* Aplica la transición en ambos casos */
+section#last-section .second-column img {transition: transform 1.5s ease;}
+@media (max-width: 767px) {
+    section#last-section .first-column {padding: 3rem 1rem;}
+    section#last-section .second-column {max-height: 30rem;}
 }
 
 section#last-section .second-column img:hover {
@@ -526,7 +528,6 @@ section#clients .row.logos-wrapper img.client-logo {width: 100%;height: auto;}
 
 @media (max-width: 1290px) {
     section#clients .row.logos-wrapper {
-        /* background-color: pink; */
         max-width: 44rem;
         margin-left: auto;
         margin-right: auto;
