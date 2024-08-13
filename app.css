@@ -24,6 +24,24 @@
 }
 
 
+/* /////////////////////////////////////////////////////////
+    # References
+///////////////////////////////////////////////////////////*/
+
+/* //////  Breakpoins   ////// */
+
+/* max-width: 1240 */
+/* max-width: 992 */
+/* max-width: 767p */
+/* max-width: 575px */
+/* max-width: 480px */
+
+
+
+/* /////////////////////////////////////////////////////////
+    # Resets and overrides
+///////////////////////////////////////////////////////////*/
+
 /* CSS reset */
 html, body {font-size: 16px;padding:0;margin:0;}
 * {box-sizing: border-box;margin: 0;padding: 0;max-width: 100%;}
@@ -87,6 +105,9 @@ p {margin-bottom: unset;padding-bottom: unset;}
     transform: scale(1.8)!important;   
 }
 
+/* /////////////////////////////////////////////////////////
+    # Misc / Gral
+///////////////////////////////////////////////////////////*/
 
 /* Responsive Font size */
 @media (max-width: 337px) {html {font-size: 12px;}}
@@ -148,7 +169,8 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 .flex {display: flex}
 .d-flex {display: flex} /* fallback alias */
 .align-items-center {align-items: center;}
-.justify-content { justify-content: flex-end; }
+.justify-content-center { justify-content: center; }
+.justify-content-end { justify-content: flex-end; }
 .justify-content-between {justify-content: space-between;}
 .align-items-center { align-items: center; }
 
@@ -165,7 +187,7 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 
 /* Half-divided container: left wrapper and right image */
 section.right-img .first-column {display: flex; justify-content: flex-end;}
-section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;}
+section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding-left: 1rem;}
 
 
 
@@ -211,6 +233,9 @@ section.right-img .first-column .content-wrapper {max-width: 600px; display: fle
     font-weight: var(--fw-regular);
 }
 .navbar .links a {font-weight: 400;font-size: 19px;font-family: 'Nunito Sans', sans-serif;}
+.navbar .links a:hover,
+.navbar .links a:focus,
+.navbar .links a:active {color: var(--primary)}
 .navbar .links a.active {color: var(--primary);}
 
 
@@ -241,7 +266,7 @@ section.right-img .first-column .content-wrapper {max-width: 600px; display: fle
         overflow: hidden;
         opacity: 0;
         transform: scale(0.9);
-        transition: height 500ms ease, opacity 300ms ease, transform 300ms ease, right 500ms ease;
+        transition: height 300ms ease, opacity 300ms ease, transform 300ms ease, right 500ms ease;
         padding: 1rem!important ;
         
 
@@ -315,34 +340,21 @@ footer .container {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	line-height: 1rem;
+	/* line-height: 1rem; */
 }
-footer .column {
-	width: 16.6%;
-	display: flex;
-	flex-direction: column;
-	padding: 0.5rem;
-	font-size: 15px;
-} 
+
 footer .column * {
-	line-height: 1rem;
-	font-size: 15px;
-	font-weight: 100;
-	margin-bottom: 0;
+	line-height: 1.75rem;
 } 
-footer .first-column { justify-content: flex-start;}
+footer .first-column { justify-content: flex-start;padding-right: 1rem;}
 footer .first-column a {width: 70%;}
 footer .first-column img.logo {width: 10rem;}
-footer .second-column { justify-content: center;}
-footer .third-column { justify-content: flex-start;}
-footer .fourth-column { justify-content: center;}
-footer .fifth-column { justify-content: flex-start;}
-footer .sixth-column { justify-content: flex-start;}
-footer .sixth-column svg {width: 0.7rem;}
+footer .second-column { justify-content: center;padding: 0 1rem;}
+footer .third-column { justify-content: flex-start;padding-left: 1rem;}
 footer h6 {text-transform: uppercase;font-size: var(--fw-bold);font-family: 'Open Sans', sans-serif;}
 footer li { line-height: 1.5; }
-footer a { color: var(--white); font-family: 'Open Sans', sans-serif; font-weight: 100; font-size: 15px; }
-footer a:hover { color: var(--accent); transition: 0.6s;font-weight: 100;}
+footer a { color: var(--white); font-family: 'Open Sans', sans-serif; font-weight: var(--fw-regular);}
+footer a:hover { color: var(--accent); transition: 300ms;font-weight: var(--fw-regular);}
 footer h3 { color: var(--white); font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 15px; text-transform: uppercase; padding-bottom: 10px;}
 footer .second-row .divider-horizontal-line { display: block;width: 100%;background: var(--softgray);opacity: 0.6;height: 2px;margin-top: 70px;}
 footer .second-row p { color: var(--white); text-align: center; position: relative; top: 15px; font-family: 'OpenSans', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.5;}
@@ -407,13 +419,19 @@ section.banner {
     align-items: center;
 }
 
+section.banner .container .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.banner .container .banner-content img.logo {max-width: 20rem;}
+section.banner .container .banner-content h3.subtitle {margin-top: 1rem;margin-bottom: 0;}
+
 section.banner#banner-1 {background-image: url('img/home-banner.png') ;}
 section.banner#banner-2 {background-image: url('img/home-banner.png') ;}
 
-section.banner .pre-title {margin: 0;font-family: 'Open Sans', sans-serif}
-section.banner h2 {font-weight: 300;font-size: 2.441rem;text-transform: uppercase;text-shadow: 0 0 3px black;margin-top: 0.25rem;}
-section.banner span {display: block;font-size: inherit;}
-section.banner strong {font-weight: 600;}
 
 @media (max-width: 767px) {
     section.banner {height: 600px;}
@@ -436,11 +454,30 @@ section#services .service .description p {max-width: 43ch;}
 section#services .btn.cta {margin-left: auto;margin-right: auto;margin-top: 3rem;}
 
 
-section#bridge-of-trust {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;}
-section#bridge-of-trust h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;}
+section#bridge-of-trust {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;overflow: clip;}
+section#bridge-of-trust h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;transform: translateX(51px);text-wrap: nowrap;}
 section#bridge-of-trust h1 span {display: inline-block;font-size: inherit;}
 section#bridge-of-trust h1 span.line {display: inline-block;font-size: inherit; width: 15rem;border: 1px solid var(--white);}
 section#bridge-of-trust h1 span.second-portion {transform: translateX(-102px);}
+
+@media(max-width: 992px){
+    section#bridge-of-trust h1 {font-size: 40px;}
+    section#bridge-of-trust h1 span.line {width: 10rem;}
+}
+@media (max-width: 767px) {
+    section#bridge-of-trust h1 {font-size: 30px;}
+    section#bridge-of-trust h1 span.line {width: 10rem;}
+}
+@media (max-width: 575px) {
+    section#bridge-of-trust h1 {font-size: 30px;}
+    section#bridge-of-trust h1 span.line {width: 10rem;}
+}
+@media (max-width: 480px) {
+    section#bridge-of-trust h1 {font-size: 20px;}
+    section#bridge-of-trust h1 span.line {width: 8rem;}
+}
+
+
 
 section#about-us {background: var(--white);padding: 4.5rem 0;}
 /* section#about-us .first-column {} */
@@ -452,8 +489,18 @@ section#about-us .second-column .btn.cta {margin-top: 1rem;}
 
 /* section#last-section {} */
 section#last-section .first-column {background: var(--primary);color: var(--white)}
+section#last-section .first-column .content-wrapper {width: 100%;}
 section#last-section .first-column h5 {text-transform: uppercase;font-weight: var(--fw-semibold);}
+section#last-section .first-column p {max-width: 50ch;}
 section#last-section .first-column .btn.cta {margin-top: 1rem;}
+section#last-section .second-column {overflow: clip;}
+section#last-section .second-column img {
+    transition: transform 1.5s ease; /* Aplica la transición en ambos casos */
+}
+
+section#last-section .second-column img:hover {
+    transform: scale(1.05);
+}
 
 section#clients {background: var(--white);padding-top: 3rem;padding-bottom: 3rem;}
 section#clients .row.titles-wrapper {display: flex;flex-direction: column; justify-content: center;}
