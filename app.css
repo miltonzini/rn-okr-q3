@@ -195,6 +195,19 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 section.right-img .first-column {display: flex; justify-content: flex-end;}
 section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding-left: 1rem;}
 
+/* Half-divided container: left image and right wrapper*/
+section.left-img .second-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding-left: 1rem;}
+section.left-img .second-column {display: flex; justify-content: flex-start;}
+
+
+/* accent strip section */
+.accent-strip-section {background: var(--accent);color: var(--white);text-align: center;padding: 2rem 1rem;}
+.accent-strip-section .heading {display: flex;flex-direction: row;justify-content: center;align-items: center;margin-bottom: 1rem;}
+.accent-strip-section .heading .icon {max-width: 3rem;}
+.accent-strip-section .heading .title {font-weight: var(--fw-extrabold);margin: 0 0 0 0.5rem;}
+.accent-strip-section .content-wrapper {display: flex;flex-direction: column;}
+.accent-strip-section .content-wrapper p {max-width: 65ch;margin: 0 auto;font-weight: var(--fw-semibold);}
+
 
 
 
@@ -399,6 +412,10 @@ section#post-footer {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
 }
+section#post-footer .brand {font-weight: inherit;}
+section#post-footer .brand:hover,
+section#post-footer .brand:active,
+section#post-footer .brand:focus {font-weight: var(--fw-semibold);}
 
 
 /* //////  Small banner   ////// */
@@ -560,6 +577,37 @@ section#clients .row.logos-wrapper img.client-logo {width: 100%;height: auto;}
 ///////////////////////////////////////////////////////////*/
 
 body#services .banner-sm {background: url('img/services-banner.png');background-size: cover;}
+
+body#services .list-section .heading {display: flex;flex-direction: row;justify-content: flex-start;align-items: center;margin-bottom: 1.2rem;}
+body#services .list-section .heading .icon {max-width: 3rem;}
+body#services .list-section .heading .title {font-weight: var(--fw-extrabold);margin-bottom: 0;margin-left: 1rem;}
+body#services .list-section ul li {margin-bottom: 1.2rem;}
+body#services .list-section ul img.bullet {width: 1rem;padding-bottom: 0.2rem;}
+
+body#services section#quality-assurance {
+    background: url('img/quality-assurance.png');
+    background-size: cover;
+    background-position-x: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+body#services section#regulatory-compliance {
+    background: url('img/regulatory-compliance-assistance.png');
+    background-size: cover;
+    background-position-x: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+body#services section#supply-chain-optimization {
+    background: url('img/supply-chain-optimization.png');
+    background-size: cover;
+    background-position-x: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 
 
 
