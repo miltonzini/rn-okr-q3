@@ -25,7 +25,23 @@
 
 
 /* /////////////////////////////////////////////////////////
-    # References
+    # Table of Contents
+///////////////////////////////////////////////////////////
+1. References
+2. Resets and Overrides (bootstrap, divi, etc)
+3. Misc / Gral (Global)
+4. Utilities
+5. Section Layouts
+6. Module Sections (navbar, footer, etc)
+7. View-Specific Styles
+ -- Home
+ -- Services
+ -- About Us
+*/
+
+
+/* /////////////////////////////////////////////////////////
+    # 1 - References
 ///////////////////////////////////////////////////////////*/
 
 /* //////  Breakpoins   ////// */
@@ -39,7 +55,7 @@
 
 
 /* /////////////////////////////////////////////////////////
-    # Resets and overrides
+    # 2 - Resets and overrides
 ///////////////////////////////////////////////////////////*/
 
 /* CSS reset */
@@ -113,7 +129,7 @@ p {margin-bottom: unset;padding-bottom: unset;}
 }
 
 /* /////////////////////////////////////////////////////////
-    # Misc / Gral
+    # 3 - Misc / Gral
 ///////////////////////////////////////////////////////////*/
 
 /* Responsive Font size */
@@ -170,7 +186,7 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 
 
 /* /////////////////////////////////////////////////////////
-    # Utilities
+    # 4 - Utilities
 ///////////////////////////////////////////////////////////*/
 .flex {display: flex}
 .d-flex {display: flex} /* fallback alias */
@@ -188,7 +204,7 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 
 
 /* /////////////////////////////////////////////////////////
-    # Section Layouts
+    # 5 - Section Layouts
 ///////////////////////////////////////////////////////////*/
 
 /* Half-divided container: left wrapper and right image */
@@ -213,7 +229,7 @@ section.left-img .second-column {display: flex; justify-content: flex-start;}
 
 
 /* /////////////////////////////////////////////////////////
-    # Module Sections (sections used across several views)
+    # 6 - Module Sections (sections used across several views)
 ///////////////////////////////////////////////////////////*/
 
 /* //////  Navbar   ////// */
@@ -350,9 +366,6 @@ section.left-img .second-column {display: flex; justify-content: flex-start;}
 
 
 
-
-
-
 /* //////  Footer   ////// */
 footer { padding: 7rem 0 30px 0; background: var(--black); color: var(--white);}
 footer .container {
@@ -433,8 +446,10 @@ section#post-footer .brand:focus {font-weight: var(--fw-semibold);}
     .banner-sm {margin-top: 6rem;}
 }
 
+
+
 /* /////////////////////////////////////////////////////////
-    # View: Home
+    # 7a - View: Home
 ///////////////////////////////////////////////////////////*/
 
 
@@ -573,7 +588,7 @@ section#clients .row.logos-wrapper img.client-logo {width: 100%;height: auto;}
 
 
 /* /////////////////////////////////////////////////////////
-    # View: Services
+    # 7b - View: Services
 ///////////////////////////////////////////////////////////*/
 
 body#services .banner-sm {background: url('img/services-banner.png');background-size: cover;}
@@ -612,7 +627,7 @@ body#services section#supply-chain-optimization {
 
 
 /* /////////////////////////////////////////////////////////
-    # View: About Us
+    # 7c - View: About Us
 ///////////////////////////////////////////////////////////*/
 
 body#about-us .banner-sm {background: url('img/about-us-banner.png');background-size: cover;}
