@@ -7,6 +7,7 @@
     --black: #000;
     
     --softgray: #efefef;
+    --softgray-b: #f2f3f3;
 
     /* font weights*/
     --fw-thin: 100;
@@ -217,11 +218,15 @@ section.right-img .second-column img {height: 100%;object-fit: cover;}
 
 /* Half-divided container: left image and right wrapper*/
 section.left-img .first-column img {height: 100%;object-fit: cover;}
-section.left-img .second-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 1rem;}
+section.left-img .second-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 2.5rem;}
 section.left-img .second-column {display: flex; justify-content: flex-start;}
+@media (max-width: 767px) {
+    section.left-img .columns-wrapper {flex-direction: column-reverse;}
+    section.left-img .second-column .content-wrapper {max-width: unset;}
+}
 
 /* accent strip section */
-.accent-strip-section {background: var(--accent);color: var(--white);text-align: center;padding: 2rem 1rem;}
+.accent-strip-section {background: var(--accent);color: var(--white);text-align: center;padding: 4rem 1rem;}
 .accent-strip-section .heading {display: flex;flex-direction: row;justify-content: center;align-items: center;margin-bottom: 1rem;}
 .accent-strip-section .heading .icon {max-width: 3rem;}
 .accent-strip-section .heading .title {font-weight: var(--fw-extrabold);margin: 0 0 0 0.5rem;}
@@ -365,7 +370,7 @@ section.left-img .second-column {display: flex; justify-content: flex-start;}
     opacity: 100%;
 }
 .navbar.sticky .brand {
-    width: 100px;
+    width: 140px;
 }
 
 
@@ -377,12 +382,9 @@ footer .container {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	/* line-height: 1rem; */
 }
 footer .column {width: 33%;}
-footer .column * {
-	line-height: 1.75rem;
-} 
+footer .column * {line-height: 1.75rem;} 
 footer .first-column { justify-content: flex-start;padding-right: 1rem;}
 footer .first-column a {width: 70%;}
 footer .first-column img.logo {width: 10rem;}
@@ -416,8 +418,8 @@ footer .first-column p {margin-top: 1rem;}
 
 @media (min-width: 576px) and (max-width: 1239px) {
     footer .columns-wrapper {display: flex;flex-direction: row;justify-content: space-around;column-gap: 1rem;}
-    footer .second-column {max-width: 20rem;}
-    footer .third-column {max-width: 20rem;}
+    footer .second-column {max-width: 16rem;}
+    footer .third-column {max-width: 16rem;}
 }
 
 
@@ -429,7 +431,7 @@ section#post-footer {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
 }
-section#post-footer .brand {font-weight: inherit;}
+section#post-footer .brand {font-weight: inherit;font-size: inherit;}
 section#post-footer .brand:hover,
 section#post-footer .brand:active,
 section#post-footer .brand:focus {font-weight: var(--fw-semibold);}
@@ -603,49 +605,33 @@ body#services .list-section ul img.bullet {width: 1rem;padding-bottom: 0.2rem;}
 
 
 body#services section#quality-assurance {
-    background: url('img/quality-assurance.png');
     background-size: cover;
     background-position-x: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
 }
 
-body#services section#regulatory-compliance {
-    background-image: url('img/regulatory-compliance-assistance.png');
-    background-color: rgba(149, 157, 165, 0.8);
-    background-size: cover;
-    background-position-x: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
+body#services section#regulatory-compliance {background-color: var(--softgray-b);}
+
+/* body#services section#supply-chain-optimization {} */
 
 
-body#services section#supply-chain-optimization {
-    background: url('img/supply-chain-optimization.png');
-    background-size: cover;
-    background-position-x: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-body#services section#we-value-team-work {display: flex;flex-direction: column;justify-content: center;padding-top: 1rem;padding-bottom: 2rem;}
+body#services section#we-value-team-work {display: flex;flex-direction: column;justify-content: center;padding-top: 5rem;padding-bottom: 2rem;}
 body#services section#we-value-team-work p {font-size: 40px;text-transform: uppercase;font-weight: var(--fw-medium);text-align: center;transform: translateY(-50px);}
 body#services section#we-value-team-work span.accent {color: var(--accent);font-size: inherit;}
 
 
 @media (max-width: 767px) {
     body#services section .content-wrapper {padding-left: 2rem;padding-right: 2rem;}
-    body#services section#api-sourcing {background: url('img/api-sourcing-and-procurement-mobile.png');background-size: cover;background-repeat: no-repeat;padding-top: 4rem;padding-bottom: 4rem;}
-    body#services section#api-sourcing .second-column {display: none;}
 
-    body#services section#quality-assurance {background: url('img/quality-assurance-mobile.png');background-size: cover;background-repeat: no-repeat;}
-    body#services section#quality-assurance .first-column {display: none;}
+    body#services section#api-sourcing .second-column {height: 20rem;overflow: clip;}
     
-    body#services section#regulatory-compliance {background: u  rl('img/regulatory-compliance-assistance-mobile.png');background-size: cover;background-repeat: no-repeat;}
-    body#services section#regulatory-compliance .second-column {display: none;}
+    body#services section#quality-assurance .first-column {height: 20rem;overflow: clip;}
 
-    body#services section#supply-chain-optimization {background: url('img/supply-chain-optimization-mobile.png');background-size: cover;background-repeat: no-repeat;}
-    body#services section#supply-chain-optimization .first-column {display: none;}
+    body#services section#regulatory-compliance .second-column {height: 20rem;overflow: clip;}
+
+    body#services section#supply-chain-optimization .first-column {height: 20rem;overflow: clip;}
+
+    body#services section#we-value-team-work {padding-top: 3rem}
+    body#services section#we-value-team-work p {font-size: 16px;max-width: 100%;}
 
 }
 

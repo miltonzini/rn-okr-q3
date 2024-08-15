@@ -34,17 +34,17 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-wrapper container">
-                <div class="brand"><a href="#"><img src="img/gappi-logo.png" alt="Gappi Logo"></a></div>
-                <!-- <div class="brand"><a href="#"><img src="wp-content/uploads/2024/08/gappi-logo.png" alt="Gappi Logo"></a></div> -->
+                <div class="brand"><a href="/"><img src="img/gappi-logo.png" alt="Gappi Logo"></a></div>
+                <!-- <div class="brand"><a href="/"><img src="wp-content/uploads/2024/08/gappi-logo.png" alt="Gappi Logo"></a></div> -->
 
                 <div class="menu-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
 
                 <ul class="links">
-                    <li><a href="index.html" class="">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="about-us.html" class="">About Us</a></li>
+                    <li><a href="index.html" class="home-link">Home</a></li>
+                    <li><a href="services.html" class="services-link">Services</a></li>
+                    <li><a href="about-us.html" class="about-us-link">About Us</a></li>
                     <li><a href="#contact-us" class="btn btn-accent">Contact Us</a></li>
                 </ul>
             </div>
@@ -64,7 +64,7 @@
 
         <section class="right-img list-section" id="api-sourcing">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row columns-wrapper">
                     <div class="col-md-6 first-column">
                         <div class="content-wrapper">
                             <div class="heading">
@@ -105,9 +105,9 @@
 
         <section class="left-img list-section" id="quality-assurance">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row columns-wrapper">
                     <div class="col-md-6 first-column">
-                        &nbsp;
+                        <img src="img/quality-assurance.png" alt="Quality assurance">
                     </div>
                     <div class="col-md-6 second-column">
                         <div class="content-wrapper">
@@ -131,7 +131,7 @@
 
         <section class="right-img list-section" id="regulatory-compliance">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row columns-wrapper">
                     <div class="col-md-6 first-column">
                         <div class="content-wrapper">
                             <div class="heading">
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 second-column">
-                        &nbsp;
+                        <img src="img/regulatory-compliance-assistance.png" alt="Regulatory compliance assistance">
                     </div>
                 </div>
             </div>
@@ -156,9 +156,9 @@
 
         <section class="left-img list-section" id="supply-chain-optimization">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row columns-wrapper">
                     <div class="col-md-6 first-column">
-                        &nbsp;
+                        <img src="img/supply-chain-optimization.png" alt="Supply chain optimization">
                     </div>
                     <div class="col-md-6 second-column">
                         <div class="content-wrapper">
@@ -297,6 +297,28 @@
         var header = document.querySelector("nav");
         header.classList.toggle("sticky", window.scrollY > 70);
         })
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const classToLinkMapping = {
+                "page-id-11": ".home-link",
+                "page-id-75": ".services-link",
+                "page-id-77": ".about-us-link",
+                "page-id-79": ".contact-us-link"
+            };
+
+            for (const [bodyClass, linkSelector] of Object.entries(classToLinkMapping)) {
+                if (document.body.classList.contains(bodyClass)) {
+                    const navLink = document.querySelector(linkSelector);
+
+                    if (navLink) {
+                        navLink.classList.add("active");
+                    }
+                    break;
+                }
+            }
+        });
     </script>
     <!-- ---------- INSERTAR EN CUSTOM CSS AND JS (sin tag) -->
 </body>
