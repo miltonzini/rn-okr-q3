@@ -209,12 +209,16 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 
 /* Half-divided container: left wrapper and right image */
 section.right-img .first-column {display: flex; justify-content: flex-end;}
-section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding-left: 1rem;}
+section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 1rem;}
+section.right-img .second-column img {height: 100%;object-fit: cover;}
+@media (max-width: 767px) {
+    section.right-img .first-column .content-wrapper {max-width: unset;}
+}
 
 /* Half-divided container: left image and right wrapper*/
-section.left-img .second-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding-left: 1rem;}
+section.left-img .first-column img {height: 100%;object-fit: cover;}
+section.left-img .second-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 1rem;}
 section.left-img .second-column {display: flex; justify-content: flex-start;}
-
 
 /* accent strip section */
 .accent-strip-section {background: var(--accent);color: var(--white);text-align: center;padding: 2rem 1rem;}
@@ -491,9 +495,6 @@ section.banner#banner-3 {background-image: url('/wp-content/uploads/2024/08/home
 }         
 
 
-
-
-
 section#services {background: var(--white);padding: 7rem 0;}
 section#services .section-title {color: var(--primary);text-align: center;}
 section#services .subtitle {font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: var(--fw-regular);text-align: center;max-width: 48ch;margin: 0.5rem auto 1rem auto;}
@@ -599,6 +600,8 @@ body#services .list-section .heading .title {font-weight: var(--fw-extrabold);ma
 body#services .list-section ul li {margin-bottom: 1.2rem;}
 body#services .list-section ul img.bullet {width: 1rem;padding-bottom: 0.2rem;}
 
+
+
 body#services section#quality-assurance {
     background: url('img/quality-assurance.png');
     background-size: cover;
@@ -608,12 +611,14 @@ body#services section#quality-assurance {
 }
 
 body#services section#regulatory-compliance {
-    background: url('img/regulatory-compliance-assistance.png');
+    background-image: url('img/regulatory-compliance-assistance.png');
+    background-color: rgba(149, 157, 165, 0.8);
     background-size: cover;
     background-position-x: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+
 
 body#services section#supply-chain-optimization {
     background: url('img/supply-chain-optimization.png');
@@ -623,6 +628,26 @@ body#services section#supply-chain-optimization {
     padding-bottom: 4rem;
 }
 
+body#services section#we-value-team-work {display: flex;flex-direction: column;justify-content: center;padding-top: 1rem;padding-bottom: 2rem;}
+body#services section#we-value-team-work p {font-size: 40px;text-transform: uppercase;font-weight: var(--fw-medium);text-align: center;transform: translateY(-50px);}
+body#services section#we-value-team-work span.accent {color: var(--accent);font-size: inherit;}
+
+
+@media (max-width: 767px) {
+    body#services section .content-wrapper {padding-left: 2rem;padding-right: 2rem;}
+    body#services section#api-sourcing {background: url('img/api-sourcing-and-procurement-mobile.png');background-size: cover;background-repeat: no-repeat;padding-top: 4rem;padding-bottom: 4rem;}
+    body#services section#api-sourcing .second-column {display: none;}
+
+    body#services section#quality-assurance {background: url('img/quality-assurance-mobile.png');background-size: cover;background-repeat: no-repeat;}
+    body#services section#quality-assurance .first-column {display: none;}
+    
+    body#services section#regulatory-compliance {background: u  rl('img/regulatory-compliance-assistance-mobile.png');background-size: cover;background-repeat: no-repeat;}
+    body#services section#regulatory-compliance .second-column {display: none;}
+
+    body#services section#supply-chain-optimization {background: url('img/supply-chain-optimization-mobile.png');background-size: cover;background-repeat: no-repeat;}
+    body#services section#supply-chain-optimization .first-column {display: none;}
+
+}
 
 
 
