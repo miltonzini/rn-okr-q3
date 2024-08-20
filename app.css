@@ -8,6 +8,7 @@
     
     --softgray: #efefef;
     --softgray-b: #f2f3f3;
+    --softgray-c: #f2f2f2;
 
     /* font weights*/
     --fw-thin: 100;
@@ -44,6 +45,16 @@
 /* /////////////////////////////////////////////////////////
     # 1 - References
 ///////////////////////////////////////////////////////////*/
+
+/* //////  Font sizes   ////// */
+/*
+16px - p, h6
+18px - h5
+20px - h4
+22px - h3
+49px - h2
+57px - h1
+*/
 
 /* //////  Breakpoins   ////// */
 
@@ -214,6 +225,7 @@ section.right-img .first-column .content-wrapper {max-width: 600px; display: fle
 section.right-img .second-column img {height: 100%;object-fit: cover;}
 @media (max-width: 767px) {
     section.right-img .first-column .content-wrapper {max-width: unset;}
+    section.right-img .second-column img {height: unset;width: 100%;object-fit: cover;}
 }
 
 /* Half-divided container: left image and right wrapper*/
@@ -222,6 +234,7 @@ section.left-img .second-column .content-wrapper {max-width: 600px; display: fle
 section.left-img .second-column {display: flex; justify-content: flex-start;}
 @media (max-width: 767px) {
     section.left-img .columns-wrapper {flex-direction: column-reverse;}
+    section.left-img .first-column img {height: unset;width: 100%;object-fit: cover;}
     section.left-img .second-column .content-wrapper {max-width: unset;}
 }
 
@@ -232,6 +245,10 @@ section.left-img .second-column {display: flex; justify-content: flex-start;}
 .accent-strip-section .heading .title {font-weight: var(--fw-extrabold);margin: 0 0 0 0.5rem;}
 .accent-strip-section .content-wrapper {display: flex;flex-direction: column;}
 .accent-strip-section .content-wrapper p {max-width: 65ch;margin: 0 auto;font-weight: var(--fw-semibold);}
+
+/* final section with large image*/
+section.final-img-section p {font-size: 40px;text-transform: uppercase;font-weight: var(--fw-medium);text-align: center;transform: translateY(-50px);}
+section.final-img-section span.accent {color: var(--accent);font-size: inherit;}
 
 
 
@@ -603,7 +620,6 @@ body#services .list-section ul li {margin-bottom: 1.2rem;}
 body#services .list-section ul img.bullet {width: 1rem;padding-bottom: 0.2rem;}
 
 
-
 body#services section#quality-assurance {
     background-size: cover;
     background-position-x: center;
@@ -615,8 +631,6 @@ body#services section#regulatory-compliance {background-color: var(--softgray-b)
 
 
 body#services section#we-value-team-work {display: flex;flex-direction: column;justify-content: center;padding-top: 5rem;padding-bottom: 2rem;}
-body#services section#we-value-team-work p {font-size: 40px;text-transform: uppercase;font-weight: var(--fw-medium);text-align: center;transform: translateY(-50px);}
-body#services section#we-value-team-work span.accent {color: var(--accent);font-size: inherit;}
 
 
 @media (max-width: 767px) {
@@ -642,3 +656,49 @@ body#services section#we-value-team-work span.accent {color: var(--accent);font-
 ///////////////////////////////////////////////////////////*/
 
 body#about-us .banner-sm {background: url('img/about-us-banner.png');background-size: cover;}
+
+body#about-us section .section-title {color: var(--accent);font-weight: var(--fw-extrabold);}
+
+body#about-us section#our-values {padding-top: 4rem;padding-bottom: 4rem;}
+body#about-us section#our-values .items-wrapper {display: grid;grid-template-columns: repeat(5, 1fr);gap: 1rem;}
+body#about-us section#our-values .item {padding: 1rem;text-align: center}
+body#about-us section#our-values .item .img-wrapper {max-width: 4rem;margin: 0 auto}
+body#about-us section#our-values .item .title {font-size: 20px; font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
+
+body#about-us section#mission h4,
+body#about-us section#mission p {margin-bottom: 1.5rem;}
+
+body#about-us section#vision h4,
+body#about-us section#vision p {margin-bottom: 1.5rem;}
+
+body#about-us section#who-we-are {background: var(--softgray-c);padding-top: 4rem;padding-bottom: 1rem;}
+body#about-us section#who-we-are h2.section-title {text-align: center;margin-left: auto;margin-right: auto;}
+body#about-us section#who-we-are .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;font-size: 20px;font-family: 'Open Sans', sans-serif;}
+body#about-us section#who-we-are .columns-wrapper {display: flex;flex-direction: row;column-gap: 6rem;margin-top: 2rem;}
+body#about-us section#who-we-are .columns-wrapper .column {max-width: calc(50% - 3rem)}
+body#about-us section#who-we-are .columns-wrapper .column p {margin-bottom: 1.5rem;}
+body#about-us section#who-we-are .columns-wrapper .column p:last-child {margin-bottom: 0;}
+
+body#about-us section#pharma-synergy-for-growth {background: var(--softgray-c);}
+
+@media (max-width: 1199px) {
+    body#about-us section#who-we-are .columns-wrapper {column-gap: 4rem;}
+    body#about-us section#who-we-are .columns-wrapper .column {max-width: calc(50% - 2rem)}
+}
+@media (max-width: 992px) {
+    body#about-us section#our-values .items-wrapper {display: flex;justify-content: space-around;}
+    body#about-us section#our-values .items-wrapper .item {max-width: 15rem;}
+
+    body#about-us section#who-we-are .columns-wrapper {column-gap: 2rem;}
+    body#about-us section#who-we-are .columns-wrapper .column {max-width: calc(50% - 1rem)}
+}
+@media (max-width: 767px) { 
+    body#about-us section#mission,
+    body#about-us section#vision,
+    body#about-us section#who-we-are {text-align: center;}
+
+    body#about-us section#our-values .items-wrapper {display: flex;flex-direction: column;}
+    body#about-us section#our-values .items-wrapper .item {max-width: 100%;}
+
+    body#about-us section#who-we-are .columns-wrapper .column {max-width: 100%;}
+}
