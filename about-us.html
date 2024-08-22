@@ -260,12 +260,6 @@
         AOS.init();
     </script> -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-    <!-- <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            console.log('click');
-            document.querySelector('.navbar .links').classList.toggle('active');
-        });
-    </script> -->
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             const links = document.querySelector('.navbar .links');
@@ -283,21 +277,12 @@
 
     </script>
     <script>
-        addEventListener("DOMContentLoaded", (event) => 
-        {
-            new Splide( '.splide' ).mount();
-            var splideArrows = document.querySelector('.splide__arrows');
-            splideArrows.classList.add('displayNone');
-        });
-    </script>
-    <script>
         // Sticky Navbar
         window.addEventListener("scroll", function(){
         var header = document.querySelector("nav");
         header.classList.toggle("sticky", window.scrollY > 70);
         })
     </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const classToLinkMapping = {
@@ -317,6 +302,14 @@
                     break;
                 }
             }
+        });
+    </script>
+    <script>
+        addEventListener("DOMContentLoaded", (event) => 
+        {
+            new Splide( '.splide' ).mount();
+            var splideArrows = document.querySelector('.splide__arrows');
+            splideArrows.classList.add('displayNone');
         });
     </script>
     <!-- ---------- INSERTAR EN CUSTOM CSS AND JS (sin tag) -->
