@@ -87,6 +87,8 @@ h1,h2,h3,h4,h5,h6 {padding-bottom: unset;}
 footer.et-l, 
 footer.et-l--footer {padding-top: 0;padding-bottom: 0;}
 
+textarea {resize: none;}
+
 
 
 /* Bootstrap extends and overrides */
@@ -195,6 +197,13 @@ li {text-wrap: pretty;font-size: var(--fz-base);font-weight: var(--fw-regular);f
 
 i.rotate-diagonal {transform: rotate(-45deg);}
 
+form label {display: block; margin-top: 1rem;}
+form input,
+form textarea {width: 100%;margin-top: 0.5rem;border: 0; border-bottom: 2px solid var(--accent);}
+form textarea {min-height: 3rem!important;}
+form .btn-wrapper {margin-top: 1rem}
+
+
 
 
 /* /////////////////////////////////////////////////////////
@@ -221,7 +230,7 @@ i.rotate-diagonal {transform: rotate(-45deg);}
 
 /* Half-divided container: left wrapper and right image */
 section.right-img .first-column {display: flex; justify-content: flex-end;}
-section.right-img .first-column .content-wrapper {max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 1rem;}
+section.right-img .first-column .content-wrapper {width:100%;max-width: 600px; display: flex;flex-direction: column;justify-content: center;padding: 3rem 1rem;}
 section.right-img .second-column img {height: 100%;object-fit: cover;}
 @media (max-width: 767px) {
     section.right-img .first-column .content-wrapper {max-width: unset;}
@@ -719,9 +728,16 @@ body#contact section#fist-section .item {padding: 1rem;text-align: center}
 body#contact section#fist-section .item .img-wrapper {max-width: 4rem;margin: 0 auto}
 body#contact section#fist-section .item .title {font-size: 20px; font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
 
-
 body#contact section#form-title-section {padding-top: 4rem;padding-bottom: 4rem;}
 body#contact section#form-title-section h2.section-title {text-align: center;margin-left: auto;margin-right: auto;color: var(--accent);font-weight: var(--fw-extrabold);}
 body#contact section#form-title-section .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;font-size: 20px;font-family: 'Open Sans', sans-serif;}
 
+body#contact section#form-section .content-wrapper {justify-content: flex-start;padding-right: 2rem;}
+body#contact section#form-section .content-wrapper form textarea {height: 3rem;}
 body#contact section#form-section iframe {width: 100%;height: 100%;aspect-ratio: 1;}
+
+@media (max-width: 767px ) {
+    body#contact section#fist-section .items-wrapper {display: flex;flex-direction: column;}
+
+    body#contact section#form-section .content-wrapper {padding-left: 2rem;padding-right: 2rem;}
+}
