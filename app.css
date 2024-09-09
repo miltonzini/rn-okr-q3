@@ -39,6 +39,7 @@
  -- Home
  -- Services
  -- About Us
+ -- Contact
 */
 
 
@@ -722,6 +723,7 @@ body#about-us section#pharma-synergy-for-growth {background: var(--softgray-c);}
 ///////////////////////////////////////////////////////////*/
 
 body#contact .banner-sm {background: url('img/contact-us-banner.png');background-size: cover;}
+/* body#contact .banner-sm {background: url('/wp-content/uploads/2024/09/contact-us-banner.png');background-size: cover;} */
 
 body#contact section#fist-section {padding-top: 4rem;padding-bottom: 4rem;}
 body#contact section#fist-section .items-wrapper {display: grid;grid-template-columns: repeat(3, 1fr);gap: 1rem;}
