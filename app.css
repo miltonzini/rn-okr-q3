@@ -539,9 +539,9 @@ section#services .btn.cta {margin-left: auto;margin-right: auto;margin-top: 3rem
 
 
 section#bridge-of-trust {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;overflow: clip;}
-section#bridge-of-trust h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;transform: translateX(51px);text-wrap: nowrap;}
+section#bridge-of-trust h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;transform: translateX(51px);text-wrap: nowrap;letter-spacing: -3px;word-spacing: 2px;}
 section#bridge-of-trust h1 span {display: inline-block;font-size: inherit;}
-section#bridge-of-trust h1 span.line {display: inline-block;font-size: inherit; width: 15rem;border: 1px solid var(--white);}
+section#bridge-of-trust h1 span.line {display: inline-block;font-size: inherit; width: 11.5rem;border: 1px solid var(--white);}
 section#bridge-of-trust h1 span.second-portion {transform: translateX(-102px);}
 
 @media(max-width: 992px){
@@ -571,6 +571,7 @@ section#about-us .second-column h3 {color: var(--primary);text-transform: upperc
 section#about-us .second-column h3:nth-of-type(2){margin-top: 1rem;}
 section#about-us .second-column .btn.cta {margin-top: 1rem;}
 @media (max-width: 767px) {
+    section#about-us .first-column {text-align: center;padding: 2.5rem 1rem;}
     section#about-us .second-column {text-align: center;padding: 2.5rem 1rem;}
 }
 
@@ -595,7 +596,7 @@ section#clients {background: var(--white);padding-top: 3rem;padding-bottom: 3rem
 section#clients .row.titles-wrapper {display: flex;flex-direction: column; justify-content: center;}
 section#clients .pre-title {text-transform: uppercase;text-align: center;font-weight: var(--fw-semibold);font-family: 'Open Sans', sans-serif;}
 section#clients .title {color: var(--accent);text-align: center;}
-section#clients .row.logos-wrapper {display: flex;flex-direction: row;justify-content: space-around;flex-wrap: wrap;}
+section#clients .row.logos-wrapper {display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;}
 section#clients .row.logos-wrapper .new-line {display: none;}
 section#clients .row.logos-wrapper .img-wrapper {max-width: 100%; width: 9rem;height: auto;display: flex; align-items: center;padding-top: 1rem;padding-bottom: 1rem}
 section#clients .row.logos-wrapper img.client-logo {width: 100%;height: auto;}
