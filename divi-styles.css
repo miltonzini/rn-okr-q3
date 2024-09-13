@@ -558,13 +558,13 @@ main#home-main section.banner .container .banner-content {
 main#home-main section.banner .container .banner-content img.logo {max-width: 20rem;}
 main#home-main section.banner .container .banner-content h3.subtitle {margin-top: 1rem;margin-bottom: 0;}
 
-main#home-main section.banner#banner-1 {background-image: url('img/home-banner.png') ;}
+/* main#home-main section.banner#banner-1 {background-image: url('img/home-banner.png') ;}
 main#home-main section.banner#banner-2 {background-image: url('img/home-banner.png') ;}
-main#home-main section.banner#banner-3 {background-image: url('img/home-banner.png') ;}
+main#home-main section.banner#banner-3 {background-image: url('img/home-banner.png') ;} */
 
-/* section.banner#banner-1 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
+section.banner#banner-1 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
 section.banner#banner-2 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
-section.banner#banner-3 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;} */
+section.banner#banner-3 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
 
 
 @media (max-width: 767px) {
@@ -676,8 +676,8 @@ main#home-main section#clients .row.logos-wrapper img.client-logo {width: 100%;h
     # 7b - View: Services
 ///////////////////////////////////////////////////////////*/
 
-main#services-main .banner-sm {background: url('img/services-banner.png');background-size: cover;}
-/* main#services-main .banner-sm {background: url('/wp-content/uploads/2024/08/services-banner.png');background-size: cover;} */
+/* main#services-main .banner-sm {background: url('img/services-banner.png');background-size: cover;} */
+main#services-main .banner-sm {background: url('/wp-content/uploads/2024/08/services-banner.png');background-size: cover;}
 
 main#services-main .list-section .heading {display: flex;flex-direction: row;justify-content: flex-start;align-items: center;margin-bottom: 1.2rem;}
 main#services-main .list-section .heading .icon {max-width: 3rem;}
@@ -721,8 +721,8 @@ main#services-main section#we-value-team-work {display: flex;flex-direction: col
     # 7c - View: About Us
 ///////////////////////////////////////////////////////////*/
 
-main#about-us-main .banner-sm {background: url('img/about-us-banner.png');background-size: cover;}
-/* main#about-us-main .banner-sm {background: url('/wp-content/uploads/2024/08/about-us-banner.png');background-size: cover;} */
+/* main#about-us-main .banner-sm {background: url('img/about-us-banner.png');background-size: cover;} */
+main#about-us-main .banner-sm {background: url('/wp-content/uploads/2024/08/about-us-banner.png');background-size: cover;}
 
 main#about-us-main section .section-title {color: var(--accent);font-weight: var(--fw-extrabold);}
 
@@ -780,8 +780,8 @@ main#about-us-main section#pharma-synergy-for-growth {background: var(--softgray
     # 7c - View: Contact
 ///////////////////////////////////////////////////////////*/
 
-main#contact-main .banner-sm {background: url('img/contact-us-banner.png');background-size: cover;}
-/* main#contact-main .banner-sm {background: url('/wp-content/uploads/2024/09/contact-us-banner.png');background-size: cover;} */
+/* main#contact-main .banner-sm {background: url('img/contact-us-banner.png');background-size: cover;} */
+main#contact-main .banner-sm {background: url('/wp-content/uploads/2024/09/contact-us-banner.png');background-size: cover;}
 
 main#contact-main section#fist-section {padding-top: 4rem;padding-bottom: 4rem;}
 main#contact-main section#fist-section .items-wrapper {display: grid;grid-template-columns: repeat(3, 1fr);gap: 1rem;}
