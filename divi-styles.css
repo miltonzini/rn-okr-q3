@@ -181,8 +181,8 @@ p {margin-bottom: unset;padding-bottom: unset;}
 ///////////////////////////////////////////////////////////*/
 
 /* Responsive Font size */
-@media (max-width: 337px) {html {font-size: 12px;}}
-@media (min-width: 338px) and (max-width: 380px) {html {font-size: 14px;}}
+@media (max-width: 337px) {html {font-size: 14px;}}
+@media (min-width: 338px) and (max-width: 380px) {html {font-size: 16px;}}
 @media (min-width: 381px) {html {font-size: 16px;}}
 
 /* Custom Styles */
@@ -573,9 +573,9 @@ main#home-main section.banner .container .banner-content {
 main#home-main section.banner .container .banner-content img.logo {max-width: 20rem;}
 main#home-main section.banner .container .banner-content h3.subtitle {margin-top: 1rem;margin-bottom: 0;}
 
-/* main#home-main section.banner#banner-1 {background-image: url('img/home-banner.png') ;} */
-/* main#home-main section.banner#banner-2 {background-image: url('img/home-banner.png') ;} */
-/* main#home-main section.banner#banner-3 {background-image: url('img/home-banner.png') ;} */
+/* main#home-main section.banner#banner-1 {background-image: url('img/home-banner.png') ;}
+main#home-main section.banner#banner-2 {background-image: url('img/home-banner.png') ;}
+main#home-main section.banner#banner-3 {background-image: url('img/home-banner.png') ;} */
 
 section.banner#banner-1 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
 section.banner#banner-2 {background-image: url('/wp-content/uploads/2024/08/home-banner.png') ;}
@@ -606,27 +606,26 @@ main#home-main section#services .btn.cta {margin-left: auto;margin-right: auto;m
 }
 
 
-main#home-main section#bridge-of-trust {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;overflow: clip;}
-main#home-main section#bridge-of-trust h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;transform: translateX(51px);text-wrap: nowrap;letter-spacing: -3px;word-spacing: 2px;}
-main#home-main section#bridge-of-trust h1 span {display: inline-block;font-size: inherit;}
-main#home-main section#bridge-of-trust h1 span.line {display: inline-block;font-size: inherit; width: 11.5rem;border: 1px solid var(--white);}
-main#home-main section#bridge-of-trust h1 span.second-portion {transform: translateX(-102px);}
+main#home-main section.bridge-of-trust-desktop,
+main#home-main section.bridge-of-trust-mobile {background: var(--primary);color: var(--black);padding-top: 3.5rem;padding-bottom: 3.5rem;overflow: clip;}
+main#home-main section.bridge-of-trust-desktop h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;transform: translateX(51px);text-wrap: nowrap;letter-spacing: -3px;word-spacing: 2px;}
+main#home-main section.bridge-of-trust-desktop h1 span {display: inline-block;font-size: inherit;}
+main#home-main section.bridge-of-trust-desktop h1 span.line {display: inline-block;font-size: inherit; width: 11.5rem;border: 1px solid var(--white);}
+main#home-main section.bridge-of-trust-desktop h1 span.second-portion {transform: translateX(-102px);}
+
+main#home-main section.bridge-of-trust-mobile {display: none;}
+main#home-main section.bridge-of-trust-mobile span {display: block;}
+main#home-main section.bridge-of-trust-mobile h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;letter-spacing: -3px;word-spacing: 2px;text-align: center;}
 
 @media(max-width: 992px){
-    main#home-main section#bridge-of-trust h1 {font-size: 40px;}
-    main#home-main section#bridge-of-trust h1 span.line {width: 10rem;}
+    main#home-main section.bridge-of-trust-desktop h1 {font-size: 40px;}
+    main#home-main section.bridge-of-trust-desktop h1 span.line {width: 10rem;}
 }
 @media (max-width: 767px) {
-    main#home-main section#bridge-of-trust h1 {font-size: 30px;}
-    main#home-main section#bridge-of-trust h1 span.line {width: 10rem;}
-}
-@media (max-width: 575px) {
-    main#home-main section#bridge-of-trust h1 {font-size: 30px;}
-    main#home-main section#bridge-of-trust h1 span.line {width: 10rem;}
-}
-@media (max-width: 480px) {
-    main#home-main section#bridge-of-trust h1 {font-size: 20px;}
-    main#home-main section#bridge-of-trust h1 span.line {width: 8rem;}
+    main#home-main section.bridge-of-trust-desktop {display: none;}
+    main#home-main section.bridge-of-trust-mobile {display: flex;}
+    main#home-main section.bridge-of-trust-mobile h1 {font-size: 30px;}
+    main#home-main section.bridge-of-trust-mobile h1 span.line {width: 10rem;}
 }
 
 
