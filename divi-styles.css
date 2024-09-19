@@ -22,7 +22,13 @@
     --fw-black: 900;
 
     /* font-sizes */
-    --fz-base: 16px;
+    --font-size-16: 16px; /* p, h6 */
+    --font-size-18: 18px; /* h5 */
+    --font-size-20: 20px; /* h4 */
+    --font-size-22: 22px; /* h3 */
+    --font-size-40: 40px; /* ad-hoc*/
+    --font-size-49: 49px; /* h2 */
+    --font-size-57: 57px; /* h1 */
 }
 
 
@@ -48,14 +54,18 @@
 ///////////////////////////////////////////////////////////*/
 
 /* //////  Font sizes   ////// */
-/*
-16px - p, h6
-18px - h5
-20px - h4
-22px - h3
-49px - h2
-57px - h1
+/* 
+    // font-size downscaling reference 
+
+    p, h6   | 16px -> 16px -> 15px
+    h5      | 18px -> 18px -> 16px
+    h4      | 20px -> 20px -> 18px
+    h3      | 22px -> 22px -> 20px
+    x       | 40px -> 35px -> 30px
+    h2      | 49px -> 44px -> 39px
+    h1      | 57px -> 50px -> 47px
 */
+
 
 /* //////  Breakpoints   ////// */
 
@@ -72,7 +82,7 @@
 ///////////////////////////////////////////////////////////*/
 
 /* CSS reset */
-html, body {font-size: 16px;padding:0;margin:0;}
+html, body {font-size: var(--font-size-16);padding:0;margin:0;}
 * {box-sizing: border-box;margin: 0;padding: 0;max-width: 100%;}
 ul {padding: 0!important; margin: 0!important;}
 li {list-style:none;} 
@@ -108,10 +118,6 @@ input[type=tel],
 input[type=text], 
 select, 
 textarea {padding: unset;}
-
-
-
-
 
 
 
@@ -181,12 +187,36 @@ p {margin-bottom: unset;padding-bottom: unset;}
 ///////////////////////////////////////////////////////////*/
 
 /* Responsive Font size */
-@media (max-width: 337px) {html {font-size: 14px;}}
-@media (min-width: 338px) and (max-width: 380px) {html {font-size: 16px;}}
-@media (min-width: 381px) {html {font-size: 16px;}}
+html {font-size: var(--font-size-16);}
+h1 {font-size: var(--font-size-57);}
+h2 {font-size: var(--font-size-49);}
+h3 {font-size: var(--font-size-22);}
+h4 {font-size: var(--font-size-20);}
+h5 {font-size: var(--font-size-18);}
+h6,p {font-size: var(--font-size-16);}
+
+@media (max-width: 1240px) {
+    h1 {font-size: 50px;}
+    h2 {font-size: 44px;}
+    h3 {font-size: 22px;}
+    h4 {font-size: 20px;}
+    h5 {font-size: 18px;}
+    h6,p {font-size: 16px;}
+}
+
+@media (max-width: 767px) {
+    h1 {font-size: 47px;}
+    h2 {font-size: 39px;}
+    h3 {font-size: 20px;}
+    h4 {font-size: 18px;}
+    h5 {font-size: 16px;}
+    h6,p {font-size: 15px;}
+}
+
+
 
 /* Custom Styles */
-p, span, button, li, a, input, textarea {font-size: 1rem;}
+p, span, button, li, a, input, textarea {font-size: var(--font-size-16);}
 h1, h2, h3, h4, h5, h6, .section-title {font-family: 'Nunito Sans', sans-serif;}
 section {scroll-margin-top: 68px}
 section.temp-boilerplate-section {padding: 8rem 1rem;}
@@ -194,17 +224,14 @@ section.temp-boilerplate-section {padding: 8rem 1rem;}
 @media (max-width: 767px) {    
     .section-title {text-align: center;}
 }
-p {text-wrap: pretty;font-size: var(--fz-base);font-weight: var(--fw-regular);font-family: 'Open Sans', sans-serif;}
+p {text-wrap: pretty;font-size: var(--font-size-base);font-weight: var(--fw-regular);font-family: 'Open Sans', sans-serif;}
 a {transition: all 300ms ease;}
 
 
-h1 {font-size: 57px;}
-h2 {font-size: 49px; font-family: 'Nunito Sans', sans-serif;font-weight: var(--fw-black);}
-h3 {font-size: 22px;}
-h4 {font-size: 20px;}
-h5 {font-size: 18px;}
-h6 {font-size: 16px;}
-li {text-wrap: pretty;font-size: var(--fz-base);font-weight: var(--fw-regular);font-family: 'Open Sans', sans-serif;}
+
+h2 {font-family: 'Nunito Sans', sans-serif;font-weight: var(--fw-black);}
+
+li {text-wrap: pretty;font-size: var(--font-size-base);font-weight: var(--fw-regular);font-family: 'Open Sans', sans-serif;}
 
 .btn {padding: 0.3rem 1.7rem; border-radius: 14px;border-width: 2px;width: fit-content;font-family: 'Open Sans', sans-serif;font-weight: var(--fw-bold);}
 
@@ -231,7 +258,7 @@ li {text-wrap: pretty;font-size: var(--fz-base);font-weight: var(--fw-regular);f
 
 i.rotate-diagonal {transform: rotate(-45deg);}
 
-form label {display: block !important;margin-top: 1rem !important;font-family: 'Open Sans';font-size: 16px;}
+form label {display: block !important;margin-top: 1rem !important;font-family: 'Open Sans';font-size: var(--font-size-16);}
 form input,
 form textarea {width: 100%!important;margin-top: 0.5rem!important;border: 0!important; border-bottom: 2px solid var(--accent)!important;}
 form textarea {min-height: 3rem!important;}
@@ -590,7 +617,7 @@ section.banner#banner-3 {background-image: url('/wp-content/uploads/2024/08/home
 
 main#home-main section#services {background: var(--white);padding: 5rem 0;}
 main#home-main section#services .section-title {color: var(--primary);text-align: center;}
-main#home-main section#services .subtitle {font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: var(--fw-regular);text-align: center;max-width: 48ch;margin: 0 auto 1rem auto;}
+main#home-main section#services .subtitle {font-family: 'Open Sans', sans-serif; font-size: var(--font-size-20); font-weight: var(--fw-regular);text-align: center;max-width: 48ch;margin: 0 auto 1rem auto;}
 main#home-main section#services .row.services-wrapper {margin-top: 2rem;}
 main#home-main section#services .service {display: flex;flex-direction: row;}
 main#home-main section#services .service .img-wrapper img {width: 75px;}
@@ -618,14 +645,14 @@ main#home-main section.bridge-of-trust-mobile span {display: block;}
 main#home-main section.bridge-of-trust-mobile h1 {text-transform: uppercase;margin-left: auto;margin-right: auto;margin-bottom: 0;width: fit-content;font-family: 'Nunito Sans', sans-serif;letter-spacing: -3px;word-spacing: 2px;text-align: center;}
 
 @media(max-width: 992px){
-    main#home-main section.bridge-of-trust-desktop h1 {font-size: 40px;}
+    main#home-main section.bridge-of-trust-desktop h1 {font-size: var(--font-size-40);}
     main#home-main section.bridge-of-trust-desktop h1 span.line {width: 10rem;}
 }
 @media (max-width: 767px) {
     main#home-main section.bridge-of-trust-desktop {display: none;}
     main#home-main section.bridge-of-trust-mobile {display: flex;}
-    main#home-main section.bridge-of-trust-mobile h1 {font-size: 30px;}
-    main#home-main section.bridge-of-trust-mobile h1 span.line {width: 10rem;}
+    main#home-main section.bridge-of-trust-mobile h1 {font-size: 47px;}
+    main#home-main section.bridge-of-trust-mobile h1 span {font-size: inherit}
 }
 
 
@@ -750,7 +777,7 @@ main#services-main section#we-value-team-work {display: flex;flex-direction: col
 
     main#services-main section#we-value-team-work {padding-top: 4rem}
 
-    main#services-main section#we-value-team-work p {font-size: 16px;max-width: 100%;}
+    main#services-main section#we-value-team-work p {max-width: 100%;}
 
 }
 
@@ -775,7 +802,7 @@ main#about-us-main section#our-values {padding-top: 4rem;padding-bottom: 4rem;}
 main#about-us-main section#our-values .items-wrapper {display: grid;grid-template-columns: repeat(5, 1fr);gap: 1rem;}
 main#about-us-main section#our-values .item {padding: 1rem;text-align: center}
 main#about-us-main section#our-values .item .img-wrapper {max-width: 4rem;margin: 0 auto}
-main#about-us-main section#our-values .item .title {font-size: 20px; font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
+main#about-us-main section#our-values .item .title {font-size: var(--font-size-20); font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
 
 main#about-us-main section#mission h4,
 main#about-us-main section#mission p {margin-bottom: 1.5rem;}
@@ -789,7 +816,7 @@ main#about-us-main section#vision .first-column img {width:100%!important;object
 
 main#about-us-main section#who-we-are {background: var(--softgray-c);padding-top: 4rem;padding-bottom: 1rem;}
 main#about-us-main section#who-we-are h2.section-title {text-align: center;margin-left: auto;margin-right: auto;}
-main#about-us-main section#who-we-are .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;margin-bottom:1rem;font-size: 20px;font-family: 'Open Sans', sans-serif;}
+main#about-us-main section#who-we-are .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;margin-bottom:1rem;font-size: var(--font-size-20);font-family: 'Open Sans', sans-serif;}
 main#about-us-main section#who-we-are .columns-wrapper {display: flex;flex-direction: row;column-gap: 6rem;margin-top: 2rem;}
 main#about-us-main section#who-we-are .columns-wrapper .column {max-width: calc(50% - 3rem)}
 main#about-us-main section#who-we-are .columns-wrapper .column p {margin-bottom: 1.5rem;}
@@ -832,11 +859,11 @@ main#contact-main section#fist-section {padding-top: 4rem;padding-bottom: 4rem;}
 main#contact-main section#fist-section .items-wrapper {display: grid;grid-template-columns: repeat(3, 1fr);gap: 1rem;}
 main#contact-main section#fist-section .item {padding: 1rem;text-align: center}
 main#contact-main section#fist-section .item .img-wrapper {max-width: 4rem;margin: 0 auto}
-main#contact-main section#fist-section .item .title {font-size: 20px; font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
+main#contact-main section#fist-section .item .title {font-size: var(--font-size-20); font-family: 'Nunito Sans', sans-serif;margin-top: 1rem;font-weight: var(--fw-extrabold);}
 
 main#contact-main section#form-title-section {padding-top: 4rem;padding-bottom: 4rem;}
 main#contact-main section#form-title-section h2.section-title {text-align: center;margin-left: auto;margin-right: auto;color: var(--accent);font-weight: var(--fw-extrabold);}
-main#contact-main section#form-title-section .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;font-size: 20px;font-family: 'Open Sans', sans-serif;}
+main#contact-main section#form-title-section .subtitle {text-align: center; max-width: 60ch;margin-left: auto;margin-right: auto;font-size: var(--font-size-20);font-family: 'Open Sans', sans-serif;}
 
 main#contact-main section#form-section .content-wrapper {justify-content: flex-start;padding-right: 2rem;}
 main#contact-main section#form-section .content-wrapper form textarea {height: 3rem;}
